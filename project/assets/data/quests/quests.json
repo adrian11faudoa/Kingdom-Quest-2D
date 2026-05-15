@@ -1,0 +1,197 @@
+[
+  {
+    "id": "main_01_goblin_threat",
+    "title": "The Goblin Threat",
+    "description": "Goblins have been raiding the village of Ashvale. Elder Mira asks you to thin their numbers to the north.",
+    "category": "main",
+    "giver_npc": "elder_mira",
+    "objectives": [
+      {
+        "id": "kill_goblins",
+        "type": "kill",
+        "target": "goblin",
+        "count": 5,
+        "description": "Defeat 5 Goblins north of the village"
+      },
+      {
+        "id": "talk_to_mira",
+        "type": "talk",
+        "target": "elder_mira",
+        "count": 1,
+        "description": "Report back to Elder Mira"
+      }
+    ],
+    "rewards": {
+      "xp": 200,
+      "gold": 50,
+      "items": [
+        { "id": "health_potion", "qty": 2 }
+      ]
+    },
+    "prerequisites": [],
+    "next_quest": "main_02_the_shaman"
+  },
+  {
+    "id": "main_02_the_shaman",
+    "title": "The Shaman's Shadow",
+    "description": "The goblins are being coordinated by a shaman deep in Verdant Forest. Hunt him down.",
+    "category": "main",
+    "giver_npc": "elder_mira",
+    "objectives": [
+      {
+        "id": "find_shaman",
+        "type": "kill",
+        "target": "goblin_shaman",
+        "count": 1,
+        "description": "Defeat the Goblin Shaman in Verdant Forest"
+      },
+      {
+        "id": "retrieve_totem",
+        "type": "collect",
+        "target": "shaman_totem",
+        "count": 1,
+        "description": "Retrieve the Shaman's Totem"
+      }
+    ],
+    "rewards": {
+      "xp": 400,
+      "gold": 120,
+      "items": [
+        { "id": "steel_sword", "qty": 1 }
+      ]
+    },
+    "prerequisites": ["main_01_goblin_threat"],
+    "next_quest": "main_03_cave_of_echoes"
+  },
+  {
+    "id": "main_03_cave_of_echoes",
+    "title": "The Cave of Echoes",
+    "description": "The totem points to an ancient cave. The source of the darkness lies within.",
+    "category": "main",
+    "giver_npc": "elder_mira",
+    "objectives": [
+      {
+        "id": "enter_cave",
+        "type": "enter_region",
+        "target": "cave_of_echoes",
+        "count": 1,
+        "description": "Enter the Cave of Echoes"
+      },
+      {
+        "id": "kill_cave_troll",
+        "type": "kill",
+        "target": "cave_troll",
+        "count": 1,
+        "description": "Defeat the Cave Troll guardian"
+      },
+      {
+        "id": "open_ancient_chest",
+        "type": "open_chest",
+        "target": "ancient_chest_01",
+        "count": 1,
+        "description": "Open the Ancient Chest"
+      }
+    ],
+    "rewards": {
+      "xp": 600,
+      "gold": 200,
+      "items": [
+        { "id": "moonstone", "qty": 1 },
+        { "id": "chainmail", "qty": 1 }
+      ]
+    },
+    "prerequisites": ["main_02_the_shaman"],
+    "next_quest": "main_04_the_ruins"
+  },
+  {
+    "id": "side_01_lost_supplies",
+    "title": "Lost Supplies",
+    "description": "The village merchant Tomlin lost a supply wagon in the forest. He needs the crates recovered.",
+    "category": "side",
+    "giver_npc": "merchant_tomlin",
+    "objectives": [
+      {
+        "id": "find_crates",
+        "type": "collect",
+        "target": "supply_crate",
+        "count": 3,
+        "description": "Find 3 Supply Crates in Verdant Forest"
+      },
+      {
+        "id": "return_crates",
+        "type": "talk",
+        "target": "merchant_tomlin",
+        "count": 1,
+        "description": "Return to Tomlin"
+      }
+    ],
+    "rewards": {
+      "xp": 100,
+      "gold": 80,
+      "items": [
+        { "id": "health_potion", "qty": 3 },
+        { "id": "mana_potion",   "qty": 2 }
+      ]
+    },
+    "prerequisites": [],
+    "next_quest": ""
+  },
+  {
+    "id": "side_02_fishing_contest",
+    "title": "The Ashvale Fishing Contest",
+    "description": "The annual fishing contest is underway. Catch a Golden Bass to impress the judges.",
+    "category": "side",
+    "giver_npc": "fisherman_bert",
+    "objectives": [
+      {
+        "id": "catch_golden_bass",
+        "type": "collect",
+        "target": "golden_bass",
+        "count": 1,
+        "description": "Catch a Golden Bass from the Crystal Lake"
+      }
+    ],
+    "rewards": {
+      "xp": 80,
+      "gold": 60,
+      "items": [
+        { "id": "fishing_rod_upgrade", "qty": 1 }
+      ]
+    },
+    "prerequisites": [],
+    "next_quest": ""
+  },
+  {
+    "id": "side_03_farm_help",
+    "title": "A Farmer's Burden",
+    "description": "Old Hanna can barely keep up with her farm. Help her harvest some crops.",
+    "category": "side",
+    "giver_npc": "farmer_hanna",
+    "objectives": [
+      {
+        "id": "harvest_wheat",
+        "type": "collect",
+        "target": "wheat",
+        "count": 5,
+        "description": "Harvest 5 bundles of Wheat"
+      },
+      {
+        "id": "deliver_wheat",
+        "type": "talk",
+        "target": "farmer_hanna",
+        "count": 1,
+        "description": "Deliver the wheat to Hanna"
+      }
+    ],
+    "rewards": {
+      "xp": 75,
+      "gold": 40,
+      "items": [
+        { "id": "wheat_seed", "qty": 10 },
+        { "id": "health_potion", "qty": 1 }
+      ]
+    },
+    "prerequisites": [],
+    "next_quest": ""
+  }
+]

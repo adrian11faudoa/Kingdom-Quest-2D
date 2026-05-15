@@ -1,0 +1,112 @@
+[
+  {
+    "id": "blade_mastery_1",
+    "name": "Blade Mastery I",
+    "description": "Increases base attack by 3.",
+    "category": "combat",
+    "tier": 1,
+    "cost": 1,
+    "prerequisites": [],
+    "effect": { "type": "stat_bonus", "stat": "attack", "value": 3 },
+    "icon": "res://assets/art/ui/icons/skills/blade_mastery.png"
+  },
+  {
+    "id": "blade_mastery_2",
+    "name": "Blade Mastery II",
+    "description": "Increases base attack by 5.",
+    "category": "combat",
+    "tier": 2,
+    "cost": 1,
+    "prerequisites": ["blade_mastery_1"],
+    "effect": { "type": "stat_bonus", "stat": "attack", "value": 5 },
+    "icon": "res://assets/art/ui/icons/skills/blade_mastery.png"
+  },
+  {
+    "id": "iron_body_1",
+    "name": "Iron Body I",
+    "description": "Increases base defense by 3.",
+    "category": "defense",
+    "tier": 1,
+    "cost": 1,
+    "prerequisites": [],
+    "effect": { "type": "stat_bonus", "stat": "defense", "value": 3 },
+    "icon": "res://assets/art/ui/icons/skills/iron_body.png"
+  },
+  {
+    "id": "iron_body_2",
+    "name": "Iron Body II",
+    "description": "Increases base defense by 5 and max health by 20.",
+    "category": "defense",
+    "tier": 2,
+    "cost": 2,
+    "prerequisites": ["iron_body_1"],
+    "effect": { "type": "stat_bonus", "stat": "defense", "value": 5 },
+    "icon": "res://assets/art/ui/icons/skills/iron_body.png"
+  },
+  {
+    "id": "vitality_1",
+    "name": "Vitality I",
+    "description": "Increases max health by 25.",
+    "category": "survival",
+    "tier": 1,
+    "cost": 1,
+    "prerequisites": [],
+    "effect": { "type": "stat_bonus", "stat": "max_health", "value": 25 },
+    "icon": "res://assets/art/ui/icons/skills/vitality.png"
+  },
+  {
+    "id": "swift_feet_1",
+    "name": "Swift Feet I",
+    "description": "Increases movement speed by 15.",
+    "category": "agility",
+    "tier": 1,
+    "cost": 1,
+    "prerequisites": [],
+    "effect": { "type": "stat_bonus", "stat": "speed", "value": 15.0 },
+    "icon": "res://assets/art/ui/icons/skills/swift_feet.png"
+  },
+  {
+    "id": "arcane_aptitude_1",
+    "name": "Arcane Aptitude I",
+    "description": "Increases max mana by 20.",
+    "category": "magic",
+    "tier": 1,
+    "cost": 1,
+    "prerequisites": [],
+    "effect": { "type": "stat_bonus", "stat": "max_mana", "value": 20 },
+    "icon": "res://assets/art/ui/icons/skills/arcane_aptitude.png"
+  },
+  {
+    "id": "critical_eye_1",
+    "name": "Critical Eye I",
+    "description": "Increases critical hit chance by 5%.",
+    "category": "combat",
+    "tier": 2,
+    "cost": 2,
+    "prerequisites": ["blade_mastery_1"],
+    "effect": { "type": "stat_bonus", "stat": "crit_chance", "value": 0.05 },
+    "icon": "res://assets/art/ui/icons/skills/critical_eye.png"
+  },
+  {
+    "id": "berserker",
+    "name": "Berserker",
+    "description": "Deal 20% more damage when below 30% health.",
+    "category": "combat",
+    "tier": 3,
+    "cost": 3,
+    "prerequisites": ["blade_mastery_2", "critical_eye_1"],
+    "effect": { "type": "conditional_bonus", "condition": "low_health", "stat": "attack_percent", "value": 0.2 },
+    "icon": "res://assets/art/ui/icons/skills/berserker.png"
+  },
+  {
+    "id": "dodge_master",
+    "name": "Dodge Master",
+    "description": "Reduces dodge cooldown by 0.2 seconds.",
+    "category": "agility",
+    "tier": 2,
+    "cost": 2,
+    "prerequisites": ["swift_feet_1"],
+    "effect": { "type": "stat_bonus", "stat": "dodge_cooldown", "value": -0.2 },
+    "icon": "res://assets/art/ui/icons/skills/dodge_master.png"
+  }
+]
