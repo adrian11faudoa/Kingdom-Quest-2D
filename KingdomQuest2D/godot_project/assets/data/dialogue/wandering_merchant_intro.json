@@ -1,0 +1,48 @@
+{
+  "id": "wandering_merchant_intro",
+  "nodes": {
+    "start": {
+      "speaker": "Zara the Traveller",
+      "portrait": "res://assets/art/characters/npcs/zara_portrait.png",
+      "text": "Ah, a fellow wanderer! You have excellent timing — I've just arrived from the eastern kingdoms with the most extraordinary goods.",
+      "next": "pitch"
+    },
+    "pitch": {
+      "speaker": "Zara the Traveller",
+      "portrait": "res://assets/art/characters/npcs/zara_portrait.png",
+      "text": "Moonstones mined at the peak of the lunar eclipse. Elixirs brewed by mountain hermits. I won't be here long — I'm always moving.",
+      "choices": [
+        { "text": "Show me what you have.",        "next": "open_shop", "action": "open_shop:wandering_merchant" },
+        { "text": "Where have you come from?",     "next": "origin_story" },
+        { "text": "Maybe another time.",           "next": "farewell" }
+      ]
+    },
+    "open_shop": {
+      "speaker": "Zara the Traveller",
+      "portrait": "res://assets/art/characters/npcs/zara_portrait.png",
+      "text": "Browse freely! But don't wait too long — these items disappear quickly.",
+      "next": null
+    },
+    "origin_story": {
+      "speaker": "Zara the Traveller",
+      "portrait": "res://assets/art/characters/npcs/zara_portrait.png",
+      "text": "I've been to the Frostpeak Mountains, the Sunscorch Desert, even the ruins near the Murkveil Swamp. Each place has its own treasures, if you know where to look.",
+      "next": "origin_story_2"
+    },
+    "origin_story_2": {
+      "speaker": "Zara the Traveller",
+      "portrait": "res://assets/art/characters/npcs/zara_portrait.png",
+      "text": "Travel the world, friend. There's more out there than you can imagine.",
+      "choices": [
+        { "text": "Let me see your wares.",   "next": "open_shop", "action": "open_shop:wandering_merchant" },
+        { "text": "Thank you for the advice.", "next": "farewell" }
+      ]
+    },
+    "farewell": {
+      "speaker": "Zara the Traveller",
+      "portrait": "res://assets/art/characters/npcs/zara_portrait.png",
+      "text": "May the road rise up to meet you! And if you see me again in your travels — do stop by.",
+      "next": null
+    }
+  }
+}

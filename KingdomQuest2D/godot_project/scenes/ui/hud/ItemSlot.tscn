@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=3 uid="uid://item_slot_ui"]
+
+[sub_resource type="StyleBoxFlat" id="slot_normal"]
+bg_color = Color(0.12, 0.12, 0.18, 0.9)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3, 0.3, 0.4, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="slot_hover"]
+bg_color = Color(0.2, 0.2, 0.3, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.6, 0.6, 0.8, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="slot_selected"]
+bg_color = Color(0.25, 0.25, 0.45, 1.0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 1.0, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="ItemSlot" type="Button"]
+custom_minimum_size = Vector2(40, 40)
+theme_override_styles/normal = SubResource("slot_normal")
+theme_override_styles/hover = SubResource("slot_hover")
+theme_override_styles/pressed = SubResource("slot_selected")
+theme_override_styles/focus = SubResource("slot_selected")
+
+[node name="Icon" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="QtyLabel" type="Label" parent="."]
+anchors_preset = 4
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -14.0
+offset_top = -14.0
+text = ""
+horizontal_alignment = 2
+vertical_alignment = 2
+theme_override_font_sizes/font_size = 8
+
+[node name="RarityBar" type="ColorRect" parent="."]
+anchors_preset = 7
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.0
+color = Color(1, 1, 1, 0)

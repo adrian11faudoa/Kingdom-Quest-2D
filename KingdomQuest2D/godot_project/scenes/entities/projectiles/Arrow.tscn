@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://arrow_proj"]
+
+[ext_resource type="Script" path="res://scripts/combat/Projectile.gd" id="1"]
+
+[sub_resource type="CircleShape2D" id="proj_shape"]
+radius = 3.0
+
+[node name="Arrow" type="Area2D"]
+collision_layer = 32
+collision_mask = 12
+script = ExtResource("1")
+speed = 320.0
+max_lifetime = 2.5
+pierce_count = 0
+damage = 12
+damage_type = &"physical"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+# Arrow sprite — 8x2 px horizontal line placeholder
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("proj_shape")
+
+[node name="Trail" type="GPUParticles2D" parent="."]
+amount = 8
+lifetime = 0.15
+explosiveness = 0.0
+emitting = false

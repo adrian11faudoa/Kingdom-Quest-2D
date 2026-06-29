@@ -1,0 +1,39 @@
+{
+  "id": "blacksmith_gruk_intro",
+  "nodes": {
+    "start": {
+      "speaker": "Gruk",
+      "portrait": "res://assets/art/characters/npcs/gruk_portrait.png",
+      "text": "...",
+      "next": "gruk_grunt"
+    },
+    "gruk_grunt": {
+      "speaker": "Gruk",
+      "portrait": "res://assets/art/characters/npcs/gruk_portrait.png",
+      "text": "Need something?",
+      "choices": [
+        { "text": "I'd like to buy or sell.",        "next": "open_shop",  "action": "open_shop:blacksmith_gruk" },
+        { "text": "Can you upgrade my weapon?",      "next": "upgrade_info" },
+        { "text": "Just looking around.",            "next": "farewell"     }
+      ]
+    },
+    "open_shop": {
+      "speaker": "Gruk",
+      "portrait": "res://assets/art/characters/npcs/gruk_portrait.png",
+      "text": "Fair prices. Good steel.",
+      "next": null
+    },
+    "upgrade_info": {
+      "speaker": "Gruk",
+      "portrait": "res://assets/art/characters/npcs/gruk_portrait.png",
+      "text": "Bring me the materials. I'll do the work. No promises on magic blades — those need more than hammer and fire.",
+      "next": null
+    },
+    "farewell": {
+      "speaker": "Gruk",
+      "portrait": "res://assets/art/characters/npcs/gruk_portrait.png",
+      "text": "Mm.",
+      "next": null
+    }
+  }
+}

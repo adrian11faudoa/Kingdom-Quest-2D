@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://chest_world"]
+
+[ext_resource type="Script" path="res://scripts/systems/Chest.gd" id="1"]
+
+[sub_resource type="RectangleShape2D" id="interact_shape"]
+size = Vector2(24, 18)
+
+[node name="Chest" type="Area2D" groups=["interactables"]]
+collision_layer = 64
+collision_mask = 2
+script = ExtResource("1")
+chest_id = &""
+is_locked = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+# Chest sprite sheet: frames open/closed
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("interact_shape")
+
+[node name="PromptLabel" type="Label" parent="."]
+position = Vector2(-22, -26)
+size = Vector2(44, 12)
+text = "[E] Open"
+horizontal_alignment = 1
+visible = false

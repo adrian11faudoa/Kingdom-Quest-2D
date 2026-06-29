@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://golem_companion"]
+
+[ext_resource type="Script" path="res://scripts/systems/CompanionAI.gd" id="1"]
+
+[sub_resource type="CircleShape2D" id="body_shape"]
+radius = 9.0
+
+[node name="GolemCompanion" type="CharacterBody2D" groups=["companions"]]
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("1")
+companion_id = &"golem"
+follow_distance = 48.0
+combat_radius = 80.0
+attack_damage = 18
+attack_cooldown = 2.5
+ability_cooldown = 20.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("body_shape")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+max_speed = 80.0
+
+[node name="AttackTimer" type="Timer" parent="."]
+one_shot = true
+wait_time = 2.5
+
+[node name="AbilityTimer" type="Timer" parent="."]
+one_shot = true
+wait_time = 20.0

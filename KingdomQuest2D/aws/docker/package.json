@@ -1,0 +1,43 @@
+{
+  "name": "kingdom-quest-2d-api",
+  "version": "0.1.0",
+  "description": "Kingdom Quest 2D Game API — AWS Backend",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start":       "node src/server.js",
+    "dev":         "nodemon src/server.js",
+    "lint":        "eslint src/",
+    "test":        "jest --coverage",
+    "test:watch":  "jest --watch",
+    "db:migrate":  "node src/migrate.js",
+    "docker:build": "docker build -f Dockerfile.api -t kq2d-api:local .",
+    "docker:run":  "docker run --env-file .env -p 8080:8080 kq2d-api:local"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3":                  "^3.600.0",
+    "@aws-sdk/client-secrets-manager":     "^3.600.0",
+    "@aws-sdk/s3-request-presigner":       "^3.600.0",
+    "aws-jwt-verify":                      "^4.0.1",
+    "aws-xray-sdk-core":                   "^3.6.0",
+    "compression":                         "^1.7.4",
+    "cors":                                "^2.8.5",
+    "express":                             "^4.19.2",
+    "express-rate-limit":                  "^7.3.1",
+    "helmet":                              "^7.1.0",
+    "ioredis":                             "^5.4.1",
+    "pg":                                  "^8.12.0"
+  },
+  "devDependencies": {
+    "eslint":      "^8.57.0",
+    "jest":        "^29.7.0",
+    "nodemon":     "^3.1.4",
+    "supertest":   "^7.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": ["src/**/*.js"]
+  }
+}

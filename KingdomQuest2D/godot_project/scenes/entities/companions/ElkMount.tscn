@@ -1,0 +1,17 @@
+[gd_scene load_steps=1 format=3 uid="uid://elk_mount"]
+
+[sub_resource type="CapsuleShape2D" id="body_shape"]
+radius = 9.0
+height = 16.0
+
+[node name="ElkMount" type="CharacterBody2D" groups=["mounts"]]
+collision_layer = 0
+collision_mask = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("body_shape")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+max_speed = 60.0

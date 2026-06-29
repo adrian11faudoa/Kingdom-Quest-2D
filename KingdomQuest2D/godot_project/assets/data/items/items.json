@@ -1,0 +1,717 @@
+[
+  {
+    "id": "iron_sword",
+    "name": "Iron Sword",
+    "description": "A sturdy iron sword. Reliable and well-balanced.",
+    "category": "weapon",
+    "slot": "weapon",
+    "rarity": "common",
+    "stackable": false,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/iron_sword.png",
+    "attack_bonus": 8,
+    "defense_bonus": 0,
+    "speed_bonus": 0,
+    "health_bonus": 0,
+    "tier": 1,
+    "upgrade_to": "steel_sword",
+    "upgrade_cost": [
+      {
+        "id": "steel_ingot",
+        "qty": 2
+      },
+      {
+        "id": "sharpening_stone",
+        "qty": 1
+      }
+    ],
+    "tags": [
+      "weapon",
+      "sword",
+      "melee"
+    ],
+    "sell_price": 30,
+    "buy_price": 80
+  },
+  {
+    "id": "steel_sword",
+    "name": "Steel Sword",
+    "description": "A fine steel blade. Keen edge, excellent balance.",
+    "category": "weapon",
+    "slot": "weapon",
+    "rarity": "uncommon",
+    "stackable": false,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/steel_sword.png",
+    "attack_bonus": 16,
+    "defense_bonus": 0,
+    "speed_bonus": 0,
+    "health_bonus": 0,
+    "tier": 2,
+    "upgrade_to": "moonblade",
+    "upgrade_cost": [
+      {
+        "id": "moonstone",
+        "qty": 1
+      },
+      {
+        "id": "enchanting_dust",
+        "qty": 3
+      }
+    ],
+    "tags": [
+      "weapon",
+      "sword",
+      "melee"
+    ],
+    "sell_price": 75,
+    "buy_price": 200
+  },
+  {
+    "id": "moonblade",
+    "name": "Moonblade",
+    "description": "Forged under a lunar eclipse. Crits deal triple damage.",
+    "category": "weapon",
+    "slot": "weapon",
+    "rarity": "rare",
+    "stackable": false,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/moonblade.png",
+    "attack_bonus": 28,
+    "defense_bonus": 0,
+    "speed_bonus": 5,
+    "health_bonus": 0,
+    "tier": 3,
+    "tags": [
+      "weapon",
+      "sword",
+      "melee",
+      "magical"
+    ],
+    "sell_price": 300,
+    "buy_price": 800
+  },
+  {
+    "id": "leather_armor",
+    "name": "Leather Armor",
+    "description": "Basic protection. Light enough to move freely.",
+    "category": "armor",
+    "slot": "chest",
+    "rarity": "common",
+    "stackable": false,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/leather_armor.png",
+    "attack_bonus": 0,
+    "defense_bonus": 6,
+    "speed_bonus": 0,
+    "health_bonus": 10,
+    "tier": 1,
+    "upgrade_to": "chainmail",
+    "upgrade_cost": [
+      {
+        "id": "iron_ingot",
+        "qty": 4
+      }
+    ],
+    "tags": [
+      "armor",
+      "chest"
+    ],
+    "sell_price": 20,
+    "buy_price": 60
+  },
+  {
+    "id": "chainmail",
+    "name": "Chainmail",
+    "description": "Interlocked iron rings. Good balance of protection and mobility.",
+    "category": "armor",
+    "slot": "chest",
+    "rarity": "uncommon",
+    "stackable": false,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/chainmail.png",
+    "attack_bonus": 0,
+    "defense_bonus": 14,
+    "speed_bonus": -5,
+    "health_bonus": 20,
+    "tier": 2,
+    "tags": [
+      "armor",
+      "chest"
+    ],
+    "sell_price": 60,
+    "buy_price": 160
+  },
+  {
+    "id": "health_potion",
+    "name": "Health Potion",
+    "description": "Restores 40 health. Smells faintly of berries.",
+    "category": "consumable",
+    "slot": "",
+    "rarity": "common",
+    "stackable": true,
+    "usable": true,
+    "droppable": true,
+    "use_type": "heal",
+    "heal_amount": 40,
+    "icon": "res://assets/art/ui/icons/items/health_potion.png",
+    "tags": [
+      "consumable",
+      "potion",
+      "healing"
+    ],
+    "sell_price": 8,
+    "buy_price": 20
+  },
+  {
+    "id": "mana_potion",
+    "name": "Mana Potion",
+    "description": "Restores 30 mana. Glows with a soft blue light.",
+    "category": "consumable",
+    "slot": "",
+    "rarity": "common",
+    "stackable": true,
+    "usable": true,
+    "droppable": true,
+    "use_type": "restore_mana",
+    "mana_amount": 30,
+    "icon": "res://assets/art/ui/icons/items/mana_potion.png",
+    "tags": [
+      "consumable",
+      "potion",
+      "mana"
+    ],
+    "sell_price": 8,
+    "buy_price": 20
+  },
+  {
+    "id": "stamina_herb",
+    "name": "Stamina Herb",
+    "description": "A bitter herb that restores stamina quickly.",
+    "category": "consumable",
+    "slot": "",
+    "rarity": "common",
+    "stackable": true,
+    "usable": true,
+    "droppable": true,
+    "use_type": "restore_stamina",
+    "stamina_amount": 50.0,
+    "icon": "res://assets/art/ui/icons/items/stamina_herb.png",
+    "tags": [
+      "consumable",
+      "herb"
+    ],
+    "sell_price": 5,
+    "buy_price": 12
+  },
+  {
+    "id": "strength_elixir",
+    "name": "Strength Elixir",
+    "description": "Grants Strength Buff for 60 seconds.",
+    "category": "consumable",
+    "slot": "",
+    "rarity": "uncommon",
+    "stackable": true,
+    "usable": true,
+    "droppable": true,
+    "use_type": "buff",
+    "effect_id": "strength_buff",
+    "duration": 60.0,
+    "icon": "res://assets/art/ui/icons/items/strength_elixir.png",
+    "tags": [
+      "consumable",
+      "elixir",
+      "buff"
+    ],
+    "sell_price": 25,
+    "buy_price": 65
+  },
+  {
+    "id": "iron_ingot",
+    "name": "Iron Ingot",
+    "description": "Smelted iron. Used in crafting weapons and armor.",
+    "category": "material",
+    "slot": "",
+    "rarity": "common",
+    "stackable": true,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/iron_ingot.png",
+    "tags": [
+      "material",
+      "metal"
+    ],
+    "sell_price": 4,
+    "buy_price": 10
+  },
+  {
+    "id": "steel_ingot",
+    "name": "Steel Ingot",
+    "description": "High-quality steel. Required for advanced crafting.",
+    "category": "material",
+    "slot": "",
+    "rarity": "uncommon",
+    "stackable": true,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/steel_ingot.png",
+    "tags": [
+      "material",
+      "metal"
+    ],
+    "sell_price": 12,
+    "buy_price": 30
+  },
+  {
+    "id": "moonstone",
+    "name": "Moonstone",
+    "description": "A gem that pulses with lunar energy. Rare and magical.",
+    "category": "material",
+    "slot": "",
+    "rarity": "rare",
+    "stackable": true,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/moonstone.png",
+    "tags": [
+      "material",
+      "gem",
+      "magical"
+    ],
+    "sell_price": 80,
+    "buy_price": 200
+  },
+  {
+    "id": "wood_handle",
+    "name": "Wood Handle",
+    "description": "A carved wooden grip.",
+    "category": "material",
+    "slot": "",
+    "rarity": "common",
+    "stackable": true,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/wood_handle.png",
+    "tags": [
+      "material",
+      "wood"
+    ],
+    "sell_price": 2,
+    "buy_price": 5
+  },
+  {
+    "id": "sharpening_stone",
+    "name": "Sharpening Stone",
+    "description": "Used to hone blades during upgrades.",
+    "category": "material",
+    "slot": "",
+    "rarity": "common",
+    "stackable": true,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/sharpening_stone.png",
+    "tags": [
+      "material",
+      "upgrade"
+    ],
+    "sell_price": 3,
+    "buy_price": 8
+  },
+  {
+    "id": "common_carp",
+    "name": "Common Carp",
+    "description": "A plentiful river fish. Edible.",
+    "category": "fish",
+    "slot": "",
+    "rarity": "common",
+    "stackable": true,
+    "usable": true,
+    "use_type": "heal",
+    "heal_amount": 10,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/common_carp.png",
+    "tags": [
+      "fish",
+      "food"
+    ],
+    "sell_price": 3,
+    "buy_price": 0
+  },
+  {
+    "id": "golden_bass",
+    "name": "Golden Bass",
+    "description": "A shimmering rare fish. Prized by chefs and collectors.",
+    "category": "fish",
+    "slot": "",
+    "rarity": "rare",
+    "stackable": true,
+    "usable": true,
+    "use_type": "heal",
+    "heal_amount": 30,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/golden_bass.png",
+    "tags": [
+      "fish",
+      "food"
+    ],
+    "sell_price": 40,
+    "buy_price": 0
+  },
+  {
+    "id": "rusty_key",
+    "name": "Rusty Key",
+    "description": "An old key. It might open something in the ruins.",
+    "category": "key_item",
+    "slot": "",
+    "rarity": "uncommon",
+    "stackable": false,
+    "usable": false,
+    "droppable": false,
+    "icon": "res://assets/art/ui/icons/items/rusty_key.png",
+    "tags": [
+      "key_item"
+    ],
+    "sell_price": 0,
+    "buy_price": 0
+  },
+  {
+    "id": "wheat_seed",
+    "name": "Wheat Seed",
+    "description": "Plant in tilled soil. Grows in 3 days.",
+    "category": "seed",
+    "slot": "",
+    "rarity": "common",
+    "stackable": true,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/wheat_seed.png",
+    "tags": [
+      "seed",
+      "farming"
+    ],
+    "sell_price": 2,
+    "buy_price": 5
+  },
+  {
+    "id": "wheat",
+    "name": "Wheat",
+    "description": "Harvested grain. Used in bread recipes.",
+    "category": "crop",
+    "slot": "",
+    "rarity": "common",
+    "stackable": true,
+    "usable": false,
+    "droppable": true,
+    "yield_min": 2,
+    "yield_max": 4,
+    "icon": "res://assets/art/ui/icons/items/wheat.png",
+    "tags": [
+      "crop",
+      "food",
+      "farming"
+    ],
+    "sell_price": 3,
+    "buy_price": 6
+  },
+  {
+    "id": "iron_ore",
+    "name": "Iron Ore",
+    "description": "Raw iron dug from the earth. Smelt it to make ingots.",
+    "category": "material",
+    "slot": "",
+    "rarity": "common",
+    "stackable": true,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/iron_ore.png",
+    "tags": [
+      "material",
+      "ore"
+    ],
+    "sell_price": 2,
+    "buy_price": 5
+  },
+  {
+    "id": "coal",
+    "name": "Coal",
+    "description": "Used as fuel in the forge. Essential for steel production.",
+    "category": "material",
+    "slot": "",
+    "rarity": "common",
+    "stackable": true,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/coal.png",
+    "tags": [
+      "material",
+      "fuel"
+    ],
+    "sell_price": 2,
+    "buy_price": 4
+  },
+  {
+    "id": "leather_hide",
+    "name": "Leather Hide",
+    "description": "Tanned animal hide. Flexible and durable.",
+    "category": "material",
+    "slot": "",
+    "rarity": "common",
+    "stackable": true,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/leather_hide.png",
+    "tags": [
+      "material",
+      "leather"
+    ],
+    "sell_price": 3,
+    "buy_price": 7
+  },
+  {
+    "id": "tough_string",
+    "name": "Tough String",
+    "description": "Braided sinew. Used in armor and bow crafting.",
+    "category": "material",
+    "slot": "",
+    "rarity": "common",
+    "stackable": true,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/tough_string.png",
+    "tags": [
+      "material"
+    ],
+    "sell_price": 1,
+    "buy_price": 3
+  },
+  {
+    "id": "wood_log",
+    "name": "Wood Log",
+    "description": "A solid log of timber. Can be worked into handles and planks.",
+    "category": "material",
+    "slot": "",
+    "rarity": "common",
+    "stackable": true,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/wood_log.png",
+    "tags": [
+      "material",
+      "wood"
+    ],
+    "sell_price": 1,
+    "buy_price": 3
+  },
+  {
+    "id": "red_herb",
+    "name": "Red Herb",
+    "description": "A healing herb with a sharp scent. Used in health potions.",
+    "category": "material",
+    "slot": "",
+    "rarity": "common",
+    "stackable": true,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/red_herb.png",
+    "tags": [
+      "material",
+      "herb",
+      "alchemy"
+    ],
+    "sell_price": 2,
+    "buy_price": 5
+  },
+  {
+    "id": "blue_herb",
+    "name": "Blue Herb",
+    "description": "A mana-restoring herb. Grows near streams and ponds.",
+    "category": "material",
+    "slot": "",
+    "rarity": "common",
+    "stackable": true,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/blue_herb.png",
+    "tags": [
+      "material",
+      "herb",
+      "alchemy"
+    ],
+    "sell_price": 2,
+    "buy_price": 5
+  },
+  {
+    "id": "clean_water",
+    "name": "Clean Water",
+    "description": "Fresh water collected from a spring. Used as a solvent in alchemy.",
+    "category": "material",
+    "slot": "",
+    "rarity": "common",
+    "stackable": true,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/clean_water.png",
+    "tags": [
+      "material",
+      "alchemy"
+    ],
+    "sell_price": 1,
+    "buy_price": 2
+  },
+  {
+    "id": "fire_essence",
+    "name": "Fire Essence",
+    "description": "Crystallised heat energy. Used in powerful elixirs.",
+    "category": "material",
+    "slot": "",
+    "rarity": "uncommon",
+    "stackable": true,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/fire_essence.png",
+    "tags": [
+      "material",
+      "essence",
+      "alchemy"
+    ],
+    "sell_price": 15,
+    "buy_price": 40
+  },
+  {
+    "id": "salt",
+    "name": "Salt",
+    "description": "A pinch of seasoning. Used in cooking recipes.",
+    "category": "material",
+    "slot": "",
+    "rarity": "common",
+    "stackable": true,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/salt.png",
+    "tags": [
+      "material",
+      "cooking"
+    ],
+    "sell_price": 1,
+    "buy_price": 2
+  },
+  {
+    "id": "enchanting_dust",
+    "name": "Enchanting Dust",
+    "description": "Shimmering powder used in enchanting rituals. Hard to find.",
+    "category": "material",
+    "slot": "",
+    "rarity": "uncommon",
+    "stackable": true,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/enchanting_dust.png",
+    "tags": [
+      "material",
+      "magic",
+      "enchanting"
+    ],
+    "sell_price": 18,
+    "buy_price": 50
+  },
+  {
+    "id": "scorpion_claw",
+    "name": "Scorpion Claw",
+    "description": "A razor-sharp claw from a desert scorpion. Used in alchemical venom recipes.",
+    "category": "material",
+    "slot": "",
+    "rarity": "uncommon",
+    "stackable": true,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/scorpion_claw.png",
+    "tags": [
+      "material",
+      "monster_drop"
+    ],
+    "sell_price": 12,
+    "buy_price": 0
+  },
+  {
+    "id": "ice_crystal",
+    "name": "Ice Crystal",
+    "description": "A shard of perpetual frost from an ice wraith. Radiates cold.",
+    "category": "material",
+    "slot": "",
+    "rarity": "uncommon",
+    "stackable": true,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/ice_crystal.png",
+    "tags": [
+      "material",
+      "monster_drop",
+      "magical"
+    ],
+    "sell_price": 14,
+    "buy_price": 0
+  },
+  {
+    "id": "swamp_hide",
+    "name": "Swamp Hide",
+    "description": "Thick, waterproof hide from a swamp lurker. Used for heavy armour.",
+    "category": "material",
+    "slot": "",
+    "rarity": "uncommon",
+    "stackable": true,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/swamp_hide.png",
+    "tags": [
+      "material",
+      "monster_drop",
+      "leather"
+    ],
+    "sell_price": 16,
+    "buy_price": 0
+  },
+  {
+    "id": "bread",
+    "name": "Bread",
+    "description": "A warm loaf. Restores a modest amount of health.",
+    "category": "consumable",
+    "slot": "",
+    "rarity": "common",
+    "stackable": true,
+    "usable": true,
+    "droppable": true,
+    "use_type": "heal",
+    "heal_amount": 20,
+    "icon": "res://assets/art/ui/icons/items/bread.png",
+    "tags": [
+      "consumable",
+      "food",
+      "cooking"
+    ],
+    "sell_price": 4,
+    "buy_price": 10
+  },
+  {
+    "id": "fishing_rod_upgrade",
+    "name": "Expert Fishing Rod",
+    "description": "A finely balanced rod that increases the reel control window.",
+    "category": "tool",
+    "slot": "",
+    "rarity": "uncommon",
+    "stackable": false,
+    "usable": false,
+    "droppable": true,
+    "icon": "res://assets/art/ui/icons/items/fishing_rod_upgrade.png",
+    "tags": [
+      "tool",
+      "fishing"
+    ],
+    "sell_price": 30,
+    "buy_price": 0
+  }
+]

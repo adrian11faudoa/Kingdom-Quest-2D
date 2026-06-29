@@ -1,0 +1,60 @@
+[gd_scene load_steps=1 format=3 uid="uid://credits_screen"]
+
+[node name="Credits" type="Control"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.04, 0.04, 0.1, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 20.0
+offset_right = -40.0
+offset_bottom = -40.0
+
+[node name="Credits" type="RichTextLabel" parent="ScrollContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+bbcode_enabled = true
+text = "[center][b]KINGDOM QUEST 2D[/b]
+
+A 2D Action RPG built with Godot 4
+
+[b]Engine[/b]
+Godot 4.x
+
+[b]Backend Infrastructure[/b]
+AWS ECS Fargate, RDS PostgreSQL, ElastiCache Redis
+CloudFront, S3, Cognito, Lambda
+
+[b]Architecture[/b]
+Modular GDScript Systems
+Data-driven JSON content pipeline
+Event Bus pattern for decoupled systems
+
+[b]Special Thanks[/b]
+The Godot community
+AWS for cloud infrastructure
+
+[i]Kingdom Quest 2D — An indie RPG adventure[/i][/center]"
+
+[node name="BackButton" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -36.0
+offset_right = 50.0
+offset_bottom = -8.0
+text = "Back"

@@ -1,0 +1,46 @@
+{
+  "id": "tomlin_intro",
+  "nodes": {
+    "start": {
+      "speaker": "Tomlin",
+      "portrait": "res://assets/art/characters/npcs/tomlin_portrait.png",
+      "text": "Welcome, welcome! Finest goods in the valley, I promise you that. Well... the only goods in the valley, but still finest!",
+      "next": "offer_help"
+    },
+    "offer_help": {
+      "speaker": "Tomlin",
+      "portrait": "res://assets/art/characters/npcs/tomlin_portrait.png",
+      "text": "What can I do for you today?",
+      "choices": [
+        { "text": "I'd like to browse your wares.",    "next": "open_shop",  "action": "open_shop:merchant_tomlin" },
+        { "text": "Do you need any help?",             "next": "quest_hint" },
+        { "text": "Nothing, just passing through.",   "next": "farewell"   }
+      ]
+    },
+    "open_shop": {
+      "speaker": "Tomlin",
+      "portrait": "res://assets/art/characters/npcs/tomlin_portrait.png",
+      "text": "Take a look, take a look!",
+      "next": null
+    },
+    "quest_hint": {
+      "speaker": "Tomlin",
+      "portrait": "res://assets/art/characters/npcs/tomlin_portrait.png",
+      "text": "Actually, yes. I had a supply wagon stolen by goblins near the forest road. Three crates of good stock, gone. If you found them, I'd make it worth your while.",
+      "next": "quest_offer",
+      "action": "start_quest:side_01_lost_supplies"
+    },
+    "quest_offer": {
+      "speaker": "Tomlin",
+      "portrait": "res://assets/art/characters/npcs/tomlin_portrait.png",
+      "text": "The crates had my mark on them — a blue star. You can't miss them.",
+      "next": null
+    },
+    "farewell": {
+      "speaker": "Tomlin",
+      "portrait": "res://assets/art/characters/npcs/tomlin_portrait.png",
+      "text": "Safe travels! Come back if you need anything.",
+      "next": null
+    }
+  }
+}

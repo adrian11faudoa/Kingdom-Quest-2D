@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://hud_notification"]
+
+[sub_resource type="LabelSettings" id="notif_settings"]
+font_size = 10
+outline_size = 2
+outline_color = Color(0, 0, 0, 0.8)
+
+[node name="Notification" type="Label"]
+custom_minimum_size = Vector2(200, 16)
+text = ""
+horizontal_alignment = 1
+label_settings = SubResource("notif_settings")
+size_flags_horizontal = 4

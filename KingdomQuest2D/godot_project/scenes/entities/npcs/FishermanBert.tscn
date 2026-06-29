@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://npc_fisherman_bert"]
+
+[ext_resource type="Script" path="res://scripts/enemies/NPCController.gd" id="1"]
+
+[sub_resource type="CircleShape2D" id="interact_shape"]
+radius = 24.0
+
+[sub_resource type="CapsuleShape2D" id="body_shape"]
+radius = 5.0
+height = 10.0
+
+[node name="FishermanBert" type="CharacterBody2D" groups=["npcs"]]
+collision_layer = 8
+collision_mask = 1
+script = ExtResource("1")
+npc_id = &"fisherman_bert"
+dialogue_id = &"fisherman_bert_intro"
+is_merchant = false
+merchant_id = &""
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("body_shape")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+max_speed = 60.0
+
+[node name="InteractArea" type="Area2D" parent="."]
+collision_layer = 64
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
+shape = SubResource("interact_shape")
+
+[node name="InteractLabel" type="Label" parent="."]
+position = Vector2(-24, -28)
+size = Vector2(48, 12)
+text = "[E] Talk"
+horizontal_alignment = 1
+visible = false
+theme_override_font_sizes/font_size = 8

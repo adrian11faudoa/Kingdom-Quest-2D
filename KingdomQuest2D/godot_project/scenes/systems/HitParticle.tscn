@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://hit_particle"]
+
+[sub_resource type="ParticleProcessMaterial" id="hit_material"]
+direction = Vector3(0, -1, 0)
+spread = 45.0
+initial_velocity_min = 40.0
+initial_velocity_max = 80.0
+gravity = Vector3(0, 200, 0)
+scale_min = 2.0
+scale_max = 4.0
+color = Color(1, 0.8, 0.2, 1)
+
+[node name="HitParticle" type="GPUParticles2D"]
+amount = 8
+lifetime = 0.3
+one_shot = true
+explosiveness = 0.95
+process_material = SubResource("hit_material")
+emitting = false
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+wait_time = 0.5

@@ -1,0 +1,66 @@
+# =============================================================================
+# Kingdom Quest 2D — .gitignore
+# =============================================================================
+
+# ── Godot ─────────────────────────────────────────────────────────────────────
+godot_project/.godot/
+godot_project/export/
+*.import
+*.translation
+*.uid
+
+# ── Terraform ─────────────────────────────────────────────────────────────────
+**/.terraform/
+**/.terraform.lock.hcl
+**/terraform.tfstate
+**/terraform.tfstate.backup
+**/terraform.tfstate.*.backup
+**/.terraform.tfstate.lock.info
+**/tfplan
+**/override.tf
+**/override.tf.json
+**/*_override.tf
+**/*_override.tf.json
+
+# NEVER commit these
+**/prod.tfvars    # Contains sensitive values — use TF_VAR_ env vars
+aws/terraform/environments/prod/prod.tfvars
+
+# ── Node.js ───────────────────────────────────────────────────────────────────
+aws/docker/node_modules/
+aws/docker/coverage/
+aws/docker/.env
+aws/docker/.env.local
+aws/docker/.env.*.local
+
+# ── Docker ────────────────────────────────────────────────────────────────────
+aws/docker/.dockerignore
+
+# ── AWS / Credentials ─────────────────────────────────────────────────────────
+.aws/
+*.pem
+*.key
+auth.cfg
+
+# ── Python Lambda ─────────────────────────────────────────────────────────────
+aws/lambda_src/**/__pycache__/
+aws/lambda_src/**/*.pyc
+aws/lambda_src/**/.pytest_cache/
+aws/lambda_src/**/venv/
+/tmp/*.zip
+
+# ── Build artifacts ───────────────────────────────────────────────────────────
+/tmp/kq2d_web_build/
+*.export.zip
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+logs/

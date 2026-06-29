@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://fox_companion"]
+
+[ext_resource type="Script" path="res://scripts/systems/CompanionAI.gd" id="1"]
+
+[sub_resource type="CircleShape2D" id="body_shape"]
+radius = 5.0
+
+[node name="FoxCompanion" type="CharacterBody2D" groups=["companions"]]
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("1")
+companion_id = &"fox"
+follow_distance = 56.0
+combat_radius = 100.0
+attack_damage = 6
+attack_cooldown = 1.8
+ability_cooldown = 15.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("body_shape")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+max_speed = 120.0
+path_desired_distance = 8.0
+
+[node name="AttackTimer" type="Timer" parent="."]
+one_shot = true
+wait_time = 1.8
+
+[node name="AbilityTimer" type="Timer" parent="."]
+one_shot = true
+wait_time = 15.0

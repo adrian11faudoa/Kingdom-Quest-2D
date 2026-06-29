@@ -1,0 +1,136 @@
+[gd_scene load_steps=3 format=3 uid="uid://main_menu"]
+
+[ext_resource type="Script" path="res://scripts/ui/MainMenu.gd" id="1"]
+
+[sub_resource type="StyleBoxFlat" id="btn_normal"]
+bg_color = Color(0.12, 0.12, 0.22, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.4, 0.4, 0.6, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+content_margin_left = 20.0
+content_margin_top = 8.0
+content_margin_right = 20.0
+content_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="btn_hover"]
+bg_color = Color(0.25, 0.25, 0.45, 1.0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7, 0.7, 1.0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+content_margin_left = 20.0
+content_margin_top = 8.0
+content_margin_right = 20.0
+content_margin_bottom = 8.0
+
+[node name="MainMenu" type="Control"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.05, 0.04, 0.1, 1)
+
+[node name="Logo" type="TextureRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 60.0
+offset_right = 150.0
+offset_bottom = 150.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TitleLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 155.0
+offset_right = 200.0
+offset_bottom = 185.0
+text = "KINGDOM QUEST 2D"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 24
+
+[node name="MenuPanel" type="VBoxContainer" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 200.0
+offset_right = 100.0
+offset_bottom = 380.0
+theme_override_constants/separation = 10
+
+[node name="NewGameBtn" type="Button" parent="MenuPanel"]
+text = "New Game"
+theme_override_styles/normal = SubResource("btn_normal")
+theme_override_styles/hover = SubResource("btn_hover")
+theme_override_font_sizes/font_size = 12
+
+[node name="LoadGameBtn" type="Button" parent="MenuPanel"]
+text = "Load Game"
+theme_override_styles/normal = SubResource("btn_normal")
+theme_override_styles/hover = SubResource("btn_hover")
+theme_override_font_sizes/font_size = 12
+
+[node name="SettingsBtn" type="Button" parent="MenuPanel"]
+text = "Settings"
+theme_override_styles/normal = SubResource("btn_normal")
+theme_override_styles/hover = SubResource("btn_hover")
+theme_override_font_sizes/font_size = 12
+
+[node name="CreditsBtn" type="Button" parent="MenuPanel"]
+text = "Credits"
+theme_override_styles/normal = SubResource("btn_normal")
+theme_override_styles/hover = SubResource("btn_hover")
+theme_override_font_sizes/font_size = 12
+
+[node name="QuitBtn" type="Button" parent="MenuPanel"]
+text = "Quit"
+theme_override_styles/normal = SubResource("btn_normal")
+theme_override_styles/hover = SubResource("btn_hover")
+theme_override_font_sizes/font_size = 12
+
+[node name="VersionLabel" type="Label" parent="."]
+anchors_preset = 12
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -18.0
+offset_right = -8.0
+offset_bottom = -4.0
+text = "v0.1.0"
+horizontal_alignment = 2
+theme_override_font_sizes/font_size = 8
+
+[node name="SlotPanel" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+visible = false
+
+[node name="SettingsPanel" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+visible = false

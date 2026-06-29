@@ -1,0 +1,448 @@
+[
+  {
+    "id": "goblin",
+    "name": "Goblin",
+    "description": "A small, quick creature. Travels in packs.",
+    "archetype": "melee",
+    "max_health": 30,
+    "attack": 6,
+    "defense": 2,
+    "speed": 110.0,
+    "detect_radius": 140.0,
+    "attack_radius": 32.0,
+    "attack_cooldown": 1.2,
+    "stagger_duration": 0.35,
+    "flee_threshold": 0.0,
+    "xp_reward": 15,
+    "loot_table": [
+      {
+        "item_id": "iron_ingot",
+        "weight": 25,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "item_id": "health_potion",
+        "weight": 15,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "item_id": "gold",
+        "weight": 80,
+        "min": 2,
+        "max": 8
+      }
+    ],
+    "sprite_sheet": "res://assets/art/characters/enemies/goblin.png",
+    "sfx_hurt": "res://assets/audio/sfx/goblin_hurt.ogg",
+    "sfx_attack": "res://assets/audio/sfx/goblin_attack.ogg",
+    "sfx_death": "res://assets/audio/sfx/goblin_death.ogg"
+  },
+  {
+    "id": "goblin_archer",
+    "name": "Goblin Archer",
+    "description": "A goblin who prefers to attack from range.",
+    "archetype": "ranged",
+    "max_health": 22,
+    "attack": 9,
+    "defense": 1,
+    "speed": 90.0,
+    "detect_radius": 180.0,
+    "attack_radius": 160.0,
+    "attack_cooldown": 2.0,
+    "stagger_duration": 0.4,
+    "flee_threshold": 0.3,
+    "xp_reward": 18,
+    "loot_table": [
+      {
+        "item_id": "gold",
+        "weight": 70,
+        "min": 3,
+        "max": 10
+      },
+      {
+        "item_id": "iron_ingot",
+        "weight": 20,
+        "min": 1,
+        "max": 2
+      }
+    ],
+    "sprite_sheet": "res://assets/art/characters/enemies/goblin_archer.png"
+  },
+  {
+    "id": "forest_wolf",
+    "name": "Forest Wolf",
+    "description": "A territorial predator. Fast and aggressive.",
+    "archetype": "melee",
+    "max_health": 45,
+    "attack": 10,
+    "defense": 3,
+    "speed": 145.0,
+    "detect_radius": 200.0,
+    "attack_radius": 36.0,
+    "attack_cooldown": 0.9,
+    "stagger_duration": 0.2,
+    "flee_threshold": 0.15,
+    "xp_reward": 25,
+    "loot_table": [
+      {
+        "item_id": "gold",
+        "weight": 50,
+        "min": 2,
+        "max": 6
+      }
+    ],
+    "sprite_sheet": "res://assets/art/characters/enemies/wolf.png"
+  },
+  {
+    "id": "cave_troll",
+    "name": "Cave Troll",
+    "description": "A massive creature. Slow but devastatingly powerful.",
+    "archetype": "tank",
+    "max_health": 120,
+    "attack": 22,
+    "defense": 10,
+    "speed": 65.0,
+    "detect_radius": 130.0,
+    "attack_radius": 55.0,
+    "attack_cooldown": 2.5,
+    "stagger_duration": 0.05,
+    "flee_threshold": 0.0,
+    "xp_reward": 60,
+    "loot_table": [
+      {
+        "item_id": "iron_ingot",
+        "weight": 70,
+        "min": 2,
+        "max": 4
+      },
+      {
+        "item_id": "health_potion",
+        "weight": 30,
+        "min": 1,
+        "max": 2
+      },
+      {
+        "item_id": "gold",
+        "weight": 60,
+        "min": 10,
+        "max": 25
+      },
+      {
+        "item_id": "steel_ingot",
+        "weight": 20,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "sprite_sheet": "res://assets/art/characters/enemies/cave_troll.png"
+  },
+  {
+    "id": "giant_bat",
+    "name": "Giant Bat",
+    "description": "Swoops from above. Hard to track.",
+    "archetype": "flying",
+    "max_health": 20,
+    "attack": 7,
+    "defense": 0,
+    "speed": 140.0,
+    "detect_radius": 250.0,
+    "attack_radius": 30.0,
+    "attack_cooldown": 1.4,
+    "stagger_duration": 0.5,
+    "flee_threshold": 0.25,
+    "xp_reward": 12,
+    "loot_table": [
+      {
+        "item_id": "gold",
+        "weight": 40,
+        "min": 1,
+        "max": 4
+      }
+    ],
+    "sprite_sheet": "res://assets/art/characters/enemies/bat.png"
+  },
+  {
+    "id": "goblin_shaman",
+    "name": "Goblin Shaman",
+    "description": "A sinister goblin that calls upon spirit minions.",
+    "archetype": "summoner",
+    "max_health": 55,
+    "attack": 8,
+    "defense": 3,
+    "speed": 75.0,
+    "detect_radius": 200.0,
+    "attack_radius": 200.0,
+    "attack_cooldown": 8.0,
+    "stagger_duration": 0.5,
+    "flee_threshold": 0.3,
+    "max_minions": 3,
+    "summon_id": "goblin",
+    "xp_reward": 50,
+    "loot_table": [
+      {
+        "item_id": "gold",
+        "weight": 60,
+        "min": 8,
+        "max": 20
+      },
+      {
+        "item_id": "mana_potion",
+        "weight": 40,
+        "min": 1,
+        "max": 2
+      },
+      {
+        "item_id": "enchanting_dust",
+        "weight": 25,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "sprite_sheet": "res://assets/art/characters/enemies/goblin_shaman.png"
+  },
+  {
+    "id": "desert_scorpion",
+    "name": "Desert Scorpion",
+    "description": "Its venom causes a Poison status that deals damage over time.",
+    "archetype": "melee",
+    "max_health": 35,
+    "attack": 9,
+    "defense": 5,
+    "speed": 95.0,
+    "detect_radius": 160.0,
+    "attack_radius": 38.0,
+    "attack_cooldown": 1.8,
+    "stagger_duration": 0.25,
+    "flee_threshold": 0.0,
+    "on_hit_status": "poison",
+    "on_hit_status_chance": 0.35,
+    "xp_reward": 22,
+    "loot_table": [
+      {
+        "item_id": "gold",
+        "weight": 55,
+        "min": 3,
+        "max": 10
+      },
+      {
+        "item_id": "scorpion_claw",
+        "weight": 50,
+        "min": 1,
+        "max": 2
+      }
+    ],
+    "sprite_sheet": "res://assets/art/characters/enemies/scorpion.png"
+  },
+  {
+    "id": "ice_wraith",
+    "name": "Ice Wraith",
+    "description": "A spectral being of the frozen north. Inflicts Slow.",
+    "archetype": "ranged",
+    "max_health": 40,
+    "attack": 14,
+    "defense": 2,
+    "speed": 85.0,
+    "detect_radius": 200.0,
+    "attack_radius": 170.0,
+    "attack_cooldown": 2.2,
+    "stagger_duration": 0.45,
+    "flee_threshold": 0.2,
+    "on_hit_status": "slow",
+    "on_hit_status_chance": 0.5,
+    "xp_reward": 30,
+    "loot_table": [
+      {
+        "item_id": "gold",
+        "weight": 50,
+        "min": 5,
+        "max": 15
+      },
+      {
+        "item_id": "ice_crystal",
+        "weight": 40,
+        "min": 1,
+        "max": 2
+      }
+    ],
+    "sprite_sheet": "res://assets/art/characters/enemies/ice_wraith.png"
+  },
+  {
+    "id": "swamp_lurker",
+    "name": "Swamp Lurker",
+    "description": "Camouflages in murky water. Ambushes the unwary.",
+    "archetype": "melee",
+    "max_health": 60,
+    "attack": 15,
+    "defense": 4,
+    "speed": 80.0,
+    "detect_radius": 80.0,
+    "attack_radius": 40.0,
+    "attack_cooldown": 1.6,
+    "stagger_duration": 0.2,
+    "flee_threshold": 0.0,
+    "xp_reward": 35,
+    "loot_table": [
+      {
+        "item_id": "gold",
+        "weight": 60,
+        "min": 5,
+        "max": 18
+      },
+      {
+        "item_id": "swamp_hide",
+        "weight": 45,
+        "min": 1,
+        "max": 3
+      }
+    ],
+    "sprite_sheet": "res://assets/art/characters/enemies/swamp_lurker.png"
+  },
+  {
+    "id": "ruin_guardian",
+    "name": "Ruin Guardian",
+    "description": "An animated stone construct that has stood watch for centuries.",
+    "archetype": "tank",
+    "max_health": 90,
+    "attack": 16,
+    "defense": 8,
+    "speed": 55.0,
+    "detect_radius": 120.0,
+    "attack_radius": 48.0,
+    "attack_cooldown": 2.2,
+    "stagger_duration": 0.08,
+    "flee_threshold": 0.0,
+    "xp_reward": 45,
+    "loot_table": [
+      {
+        "item_id": "gold",
+        "weight": 60,
+        "min": 8,
+        "max": 20
+      },
+      {
+        "item_id": "iron_ingot",
+        "weight": 50,
+        "min": 1,
+        "max": 3
+      },
+      {
+        "item_id": "enchanting_dust",
+        "weight": 15,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "sprite_sheet": "res://assets/art/characters/enemies/ruin_guardian.png"
+  },
+  {
+    "id": "ancient_lich",
+    "name": "Ancient Lich",
+    "description": "A supremely powerful undead sorcerer who commands the ruins. Boss of the Ruins dungeon.",
+    "archetype": "summoner",
+    "max_health": 350,
+    "attack": 28,
+    "defense": 12,
+    "speed": 70.0,
+    "detect_radius": 300.0,
+    "attack_radius": 180.0,
+    "attack_cooldown": 3.0,
+    "stagger_duration": 0.05,
+    "flee_threshold": 0.0,
+    "max_minions": 4,
+    "summon_id": "ruin_guardian",
+    "xp_reward": 800,
+    "loot_table": [
+      {
+        "item_id": "gold",
+        "weight": 100,
+        "min": 100,
+        "max": 250
+      },
+      {
+        "item_id": "moonstone",
+        "weight": 80,
+        "min": 1,
+        "max": 3
+      },
+      {
+        "item_id": "enchanting_dust",
+        "weight": 100,
+        "min": 3,
+        "max": 6
+      },
+      {
+        "item_id": "steel_ingot",
+        "weight": 70,
+        "min": 2,
+        "max": 5
+      }
+    ],
+    "sprite_sheet": "res://assets/art/characters/enemies/ancient_lich.png"
+  },
+  {
+    "id": "cave_spider",
+    "name": "Cave Spider",
+    "description": "A large eight-legged predator that lurks in cave ceilings.",
+    "archetype": "melee",
+    "max_health": 25,
+    "attack": 8,
+    "defense": 1,
+    "speed": 130.0,
+    "detect_radius": 100.0,
+    "attack_radius": 28.0,
+    "attack_cooldown": 1.0,
+    "stagger_duration": 0.45,
+    "flee_threshold": 0.2,
+    "on_hit_status": "poison",
+    "on_hit_status_chance": 0.25,
+    "xp_reward": 14,
+    "loot_table": [
+      {
+        "item_id": "gold",
+        "weight": 40,
+        "min": 1,
+        "max": 5
+      },
+      {
+        "item_id": "tough_string",
+        "weight": 50,
+        "min": 1,
+        "max": 2
+      }
+    ],
+    "sprite_sheet": "res://assets/art/characters/enemies/cave_spider.png"
+  },
+  {
+    "id": "sand_golem",
+    "name": "Sand Golem",
+    "description": "A hulking construct of compacted desert sand. Crumbles when defeated.",
+    "archetype": "tank",
+    "max_health": 110,
+    "attack": 19,
+    "defense": 9,
+    "speed": 58.0,
+    "detect_radius": 140.0,
+    "attack_radius": 52.0,
+    "attack_cooldown": 2.4,
+    "stagger_duration": 0.06,
+    "flee_threshold": 0.0,
+    "xp_reward": 55,
+    "loot_table": [
+      {
+        "item_id": "gold",
+        "weight": 60,
+        "min": 10,
+        "max": 28
+      },
+      {
+        "item_id": "iron_ore",
+        "weight": 60,
+        "min": 2,
+        "max": 5
+      }
+    ],
+    "sprite_sheet": "res://assets/art/characters/enemies/sand_golem.png"
+  }
+]

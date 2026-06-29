@@ -1,0 +1,391 @@
+[
+  {
+    "id": "main_01_goblin_threat",
+    "title": "The Goblin Threat",
+    "description": "Goblins have been raiding the village of Ashvale. Elder Mira asks you to thin their numbers to the north.",
+    "category": "main",
+    "giver_npc": "elder_mira",
+    "objectives": [
+      {
+        "id": "kill_goblins",
+        "type": "kill",
+        "target": "goblin",
+        "count": 5,
+        "description": "Defeat 5 Goblins north of the village"
+      },
+      {
+        "id": "talk_to_mira",
+        "type": "talk",
+        "target": "elder_mira",
+        "count": 1,
+        "description": "Report back to Elder Mira"
+      }
+    ],
+    "rewards": {
+      "xp": 200,
+      "gold": 50,
+      "items": [
+        {
+          "id": "health_potion",
+          "qty": 2
+        }
+      ]
+    },
+    "prerequisites": [],
+    "next_quest": "main_02_the_shaman"
+  },
+  {
+    "id": "main_02_the_shaman",
+    "title": "The Shaman's Shadow",
+    "description": "The goblins are being coordinated by a shaman deep in Verdant Forest. Hunt him down.",
+    "category": "main",
+    "giver_npc": "elder_mira",
+    "objectives": [
+      {
+        "id": "find_shaman",
+        "type": "kill",
+        "target": "goblin_shaman",
+        "count": 1,
+        "description": "Defeat the Goblin Shaman in Verdant Forest"
+      },
+      {
+        "id": "retrieve_totem",
+        "type": "collect",
+        "target": "shaman_totem",
+        "count": 1,
+        "description": "Retrieve the Shaman's Totem"
+      }
+    ],
+    "rewards": {
+      "xp": 400,
+      "gold": 120,
+      "items": [
+        {
+          "id": "steel_sword",
+          "qty": 1
+        }
+      ]
+    },
+    "prerequisites": [
+      "main_01_goblin_threat"
+    ],
+    "next_quest": "main_03_cave_of_echoes"
+  },
+  {
+    "id": "main_03_cave_of_echoes",
+    "title": "The Cave of Echoes",
+    "description": "The totem points to an ancient cave. The source of the darkness lies within.",
+    "category": "main",
+    "giver_npc": "elder_mira",
+    "objectives": [
+      {
+        "id": "enter_cave",
+        "type": "enter_region",
+        "target": "cave_of_echoes",
+        "count": 1,
+        "description": "Enter the Cave of Echoes"
+      },
+      {
+        "id": "kill_cave_troll",
+        "type": "kill",
+        "target": "cave_troll",
+        "count": 1,
+        "description": "Defeat the Cave Troll guardian"
+      },
+      {
+        "id": "open_ancient_chest",
+        "type": "open_chest",
+        "target": "ancient_chest_01",
+        "count": 1,
+        "description": "Open the Ancient Chest"
+      }
+    ],
+    "rewards": {
+      "xp": 600,
+      "gold": 200,
+      "items": [
+        {
+          "id": "moonstone",
+          "qty": 1
+        },
+        {
+          "id": "chainmail",
+          "qty": 1
+        }
+      ]
+    },
+    "prerequisites": [
+      "main_02_the_shaman"
+    ],
+    "next_quest": "main_04_the_ruins"
+  },
+  {
+    "id": "side_01_lost_supplies",
+    "title": "Lost Supplies",
+    "description": "The village merchant Tomlin lost a supply wagon in the forest. He needs the crates recovered.",
+    "category": "side",
+    "giver_npc": "merchant_tomlin",
+    "objectives": [
+      {
+        "id": "find_crates",
+        "type": "collect",
+        "target": "supply_crate",
+        "count": 3,
+        "description": "Find 3 Supply Crates in Verdant Forest"
+      },
+      {
+        "id": "return_crates",
+        "type": "talk",
+        "target": "merchant_tomlin",
+        "count": 1,
+        "description": "Return to Tomlin"
+      }
+    ],
+    "rewards": {
+      "xp": 100,
+      "gold": 80,
+      "items": [
+        {
+          "id": "health_potion",
+          "qty": 3
+        },
+        {
+          "id": "mana_potion",
+          "qty": 2
+        }
+      ]
+    },
+    "prerequisites": [],
+    "next_quest": ""
+  },
+  {
+    "id": "side_02_fishing_contest",
+    "title": "The Ashvale Fishing Contest",
+    "description": "The annual fishing contest is underway. Catch a Golden Bass to impress the judges.",
+    "category": "side",
+    "giver_npc": "fisherman_bert",
+    "objectives": [
+      {
+        "id": "catch_golden_bass",
+        "type": "collect",
+        "target": "golden_bass",
+        "count": 1,
+        "description": "Catch a Golden Bass from the Crystal Lake"
+      }
+    ],
+    "rewards": {
+      "xp": 80,
+      "gold": 60,
+      "items": [
+        {
+          "id": "fishing_rod_upgrade",
+          "qty": 1
+        }
+      ]
+    },
+    "prerequisites": [],
+    "next_quest": ""
+  },
+  {
+    "id": "side_03_farm_help",
+    "title": "A Farmer's Burden",
+    "description": "Old Hanna can barely keep up with her farm. Help her harvest some crops.",
+    "category": "side",
+    "giver_npc": "farmer_hanna",
+    "objectives": [
+      {
+        "id": "harvest_wheat",
+        "type": "collect",
+        "target": "wheat",
+        "count": 5,
+        "description": "Harvest 5 bundles of Wheat"
+      },
+      {
+        "id": "deliver_wheat",
+        "type": "talk",
+        "target": "farmer_hanna",
+        "count": 1,
+        "description": "Deliver the wheat to Hanna"
+      }
+    ],
+    "rewards": {
+      "xp": 75,
+      "gold": 40,
+      "items": [
+        {
+          "id": "wheat_seed",
+          "qty": 10
+        },
+        {
+          "id": "health_potion",
+          "qty": 1
+        }
+      ]
+    },
+    "prerequisites": [],
+    "next_quest": ""
+  },
+  {
+    "id": "main_04_the_ruins",
+    "title": "Secrets of the Ruins",
+    "description": "The ancient chest held a map pointing to ruins at the edge of the desert. A dark power stirs within.",
+    "category": "main",
+    "giver_npc": "elder_mira",
+    "objectives": [
+      {
+        "id": "reach_ruins",
+        "type": "enter_region",
+        "target": "ruins",
+        "count": 1,
+        "description": "Travel to the Ancient Ruins"
+      },
+      {
+        "id": "destroy_seals",
+        "type": "kill",
+        "target": "ruin_guardian",
+        "count": 3,
+        "description": "Destroy 3 Ruin Guardians to break the seals"
+      },
+      {
+        "id": "defeat_ancient_evil",
+        "type": "kill",
+        "target": "ancient_lich",
+        "count": 1,
+        "description": "Defeat the Ancient Lich"
+      }
+    ],
+    "rewards": {
+      "xp": 1000,
+      "gold": 400,
+      "items": [
+        {
+          "id": "moonblade",
+          "qty": 1
+        },
+        {
+          "id": "enchanting_dust",
+          "qty": 3
+        }
+      ]
+    },
+    "prerequisites": [
+      "main_03_cave_of_echoes"
+    ],
+    "next_quest": "main_05_the_return"
+  },
+  {
+    "id": "main_05_the_return",
+    "title": "The Long Road Home",
+    "description": "With the ruins cleared, return to Elder Mira. The village can finally know peace.",
+    "category": "main",
+    "giver_npc": "elder_mira",
+    "objectives": [
+      {
+        "id": "return_to_mira_final",
+        "type": "talk",
+        "target": "elder_mira",
+        "count": 1,
+        "description": "Return to Elder Mira in Ashvale"
+      }
+    ],
+    "rewards": {
+      "xp": 500,
+      "gold": 200,
+      "items": [
+        {
+          "id": "health_potion",
+          "qty": 5
+        },
+        {
+          "id": "mana_potion",
+          "qty": 5
+        }
+      ]
+    },
+    "prerequisites": [
+      "main_04_the_ruins"
+    ],
+    "next_quest": ""
+  },
+  {
+    "id": "side_04_blacksmith_materials",
+    "title": "Steel and Fire",
+    "description": "Gruk the blacksmith needs rare materials to craft something special.",
+    "category": "side",
+    "giver_npc": "blacksmith_gruk",
+    "objectives": [
+      {
+        "id": "collect_iron_ore",
+        "type": "collect",
+        "target": "iron_ore",
+        "count": 10,
+        "description": "Gather 10 Iron Ore from the cave"
+      },
+      {
+        "id": "collect_coal",
+        "type": "collect",
+        "target": "coal",
+        "count": 5,
+        "description": "Gather 5 Coal"
+      },
+      {
+        "id": "deliver_to_gruk",
+        "type": "talk",
+        "target": "blacksmith_gruk",
+        "count": 1,
+        "description": "Deliver materials to Gruk"
+      }
+    ],
+    "rewards": {
+      "xp": 150,
+      "gold": 100,
+      "items": [
+        {
+          "id": "steel_sword",
+          "qty": 1
+        }
+      ]
+    },
+    "prerequisites": [],
+    "next_quest": ""
+  },
+  {
+    "id": "side_05_herb_gathering",
+    "title": "The Alchemist's Request",
+    "description": "A wandering alchemist needs herbs from Verdant Forest.",
+    "category": "side",
+    "giver_npc": "wandering_merchant",
+    "objectives": [
+      {
+        "id": "collect_red_herbs",
+        "type": "collect",
+        "target": "red_herb",
+        "count": 5,
+        "description": "Collect 5 Red Herbs from the forest"
+      },
+      {
+        "id": "collect_blue_herbs",
+        "type": "collect",
+        "target": "blue_herb",
+        "count": 5,
+        "description": "Collect 5 Blue Herbs from near the stream"
+      }
+    ],
+    "rewards": {
+      "xp": 120,
+      "gold": 60,
+      "items": [
+        {
+          "id": "strength_elixir",
+          "qty": 2
+        },
+        {
+          "id": "fire_essence",
+          "qty": 1
+        }
+      ]
+    },
+    "prerequisites": [],
+    "next_quest": ""
+  }
+]

@@ -1,0 +1,52 @@
+{
+  "id": "fisherman_bert_intro",
+  "nodes": {
+    "start": {
+      "speaker": "Bert",
+      "portrait": "res://assets/art/characters/npcs/bert_portrait.png",
+      "text": "Shh... quiet. The fish can hear you, you know.",
+      "next": "after_shush"
+    },
+    "after_shush": {
+      "speaker": "Bert",
+      "portrait": "res://assets/art/characters/npcs/bert_portrait.png",
+      "text": "Hmm? Oh, sorry. Old habit. What do you want?",
+      "choices": [
+        { "text": "Can you teach me to fish?",           "next": "fishing_lesson" },
+        { "text": "I heard there's a contest?",          "next": "contest_info"   },
+        { "text": "Just wandering. Carry on.",           "next": "farewell"       }
+      ]
+    },
+    "fishing_lesson": {
+      "speaker": "Bert",
+      "portrait": "res://assets/art/characters/npcs/bert_portrait.png",
+      "text": "Fishing is patience and instinct in equal measure. Cast your line, wait for the tug, then reel it in before it escapes. Simple. Well — simple to say.",
+      "next": "lesson_tip"
+    },
+    "lesson_tip": {
+      "speaker": "Bert",
+      "portrait": "res://assets/art/characters/npcs/bert_portrait.png",
+      "text": "Crystal Lake to the east has the best fish. Come back when you've caught something worth bragging about.",
+      "next": null
+    },
+    "contest_info": {
+      "speaker": "Bert",
+      "portrait": "res://assets/art/characters/npcs/bert_portrait.png",
+      "text": "Aye, the annual Ashvale Fishing Contest. Catch the biggest and rarest fish you can. Bring me a Golden Bass and you'll have my respect — and a prize.",
+      "next": "contest_start",
+      "action": "start_quest:side_02_fishing_contest"
+    },
+    "contest_start": {
+      "speaker": "Bert",
+      "portrait": "res://assets/art/characters/npcs/bert_portrait.png",
+      "text": "Golden Bass are rare — you'll need patience and a bit of luck. Best spot is Crystal Lake at dawn.",
+      "next": null
+    },
+    "farewell": {
+      "speaker": "Bert",
+      "portrait": "res://assets/art/characters/npcs/bert_portrait.png",
+      "text": "Mind you don't splash. Shoo.",
+      "next": null
+    }
+  }
+}

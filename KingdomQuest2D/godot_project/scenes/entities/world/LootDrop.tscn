@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://loot_drop_world"]
+
+[ext_resource type="Script" path="res://scripts/systems/LootDrop.gd" id="1"]
+
+[sub_resource type="CircleShape2D" id="pickup_shape"]
+radius = 10.0
+
+[node name="LootDrop" type="Area2D"]
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+# Item icon — set at runtime via setup()
+
+[node name="Label" type="Label" parent="."]
+position = Vector2(-20, -24)
+size = Vector2(40, 12)
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+label_settings = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("pickup_shape")
+
+[node name="PickupDelay" type="Timer" parent="."]
+one_shot = true
+wait_time = 0.4

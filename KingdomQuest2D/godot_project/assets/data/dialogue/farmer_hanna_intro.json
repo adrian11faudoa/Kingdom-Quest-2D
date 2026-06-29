@@ -1,0 +1,48 @@
+{
+  "id": "farmer_hanna_intro",
+  "nodes": {
+    "start": {
+      "speaker": "Old Hanna",
+      "portrait": "res://assets/art/characters/npcs/hanna_portrait.png",
+      "text": "Oh my old bones. These fields don't tend themselves, but they might as well have to these days.",
+      "next": "ask_help"
+    },
+    "ask_help": {
+      "speaker": "Old Hanna",
+      "portrait": "res://assets/art/characters/npcs/hanna_portrait.png",
+      "text": "You look strong. Could you spare a moment to help an old woman with her harvest?",
+      "choices": [
+        { "text": "Of course, I'd be glad to help.", "next": "accept_help", "action": "start_quest:side_03_farm_help" },
+        { "text": "What would I need to do?",         "next": "explain_task" },
+        { "text": "I'm sorry, not right now.",        "next": "decline"      }
+      ]
+    },
+    "explain_task": {
+      "speaker": "Old Hanna",
+      "portrait": "res://assets/art/characters/npcs/hanna_portrait.png",
+      "text": "Just gather five bundles of wheat from the south field. My back can't take the bending anymore. I'll make it worth your while — seeds for your own garden.",
+      "next": "ask_help_again"
+    },
+    "ask_help_again": {
+      "speaker": "Old Hanna",
+      "portrait": "res://assets/art/characters/npcs/hanna_portrait.png",
+      "text": "So will you help?",
+      "choices": [
+        { "text": "Yes, I'll gather the wheat.", "next": "accept_help", "action": "start_quest:side_03_farm_help" },
+        { "text": "Not today, I'm afraid.",      "next": "decline" }
+      ]
+    },
+    "accept_help": {
+      "speaker": "Old Hanna",
+      "portrait": "res://assets/art/characters/npcs/hanna_portrait.png",
+      "text": "Bless you, dear. The south field is just past the fence. The wheat is ready — golden heads, you can't miss them.",
+      "next": null
+    },
+    "decline": {
+      "speaker": "Old Hanna",
+      "portrait": "res://assets/art/characters/npcs/hanna_portrait.png",
+      "text": "Oh well. These old hands will manage somehow. Come back if you change your mind.",
+      "next": null
+    }
+  }
+}

@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://magic_bolt_proj"]
+
+[ext_resource type="Script" path="res://scripts/combat/Projectile.gd" id="1"]
+
+[sub_resource type="CircleShape2D" id="proj_shape"]
+radius = 5.0
+
+[node name="MagicBolt" type="Area2D"]
+collision_layer = 32
+collision_mask = 12
+script = ExtResource("1")
+speed = 240.0
+max_lifetime = 3.0
+pierce_count = 0
+damage = 14
+damage_type = &"magic"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+# Magic bolt — glowing orb placeholder (6x6 px)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("proj_shape")
+
+[node name="Trail" type="GPUParticles2D" parent="."]
+amount = 12
+lifetime = 0.2
+explosiveness = 0.0
+emitting = false
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.4, 0.6, 1.0, 1.0)
+energy = 0.6
+texture_scale = 0.4

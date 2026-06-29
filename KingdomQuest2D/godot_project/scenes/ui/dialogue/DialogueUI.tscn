@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=3 uid="uid://dialogue_ui"]
+
+[ext_resource type="Script" path="res://scripts/ui/DialogueUI.gd" id="1"]
+
+[sub_resource type="StyleBoxFlat" id="dialogue_panel_style"]
+bg_color = Color(0.07, 0.07, 0.14, 0.97)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.4, 0.4, 0.65, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+content_margin_left = 12.0
+content_margin_top = 10.0
+content_margin_right = 12.0
+content_margin_bottom = 10.0
+
+[node name="DialogueUI" type="CanvasLayer"]
+layer = 15
+script = ExtResource("1")
+
+[node name="DialogueBox" type="PanelContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = -170.0
+offset_right = -12.0
+offset_bottom = -8.0
+theme_override_styles/panel = SubResource("dialogue_panel_style")
+visible = false
+
+[node name="HBox" type="HBoxContainer" parent="DialogueBox"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/separation = 10
+
+[node name="Portrait" type="TextureRect" parent="DialogueBox/HBox"]
+custom_minimum_size = Vector2(72, 72)
+expand_mode = 1
+stretch_mode = 6
+
+[node name="VBox" type="VBoxContainer" parent="DialogueBox/HBox"]
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="SpeakerName" type="Label" parent="DialogueBox/HBox/VBox"]
+text = ""
+theme_override_font_sizes/font_size = 11
+
+[node name="Text" type="RichTextLabel" parent="DialogueBox/HBox/VBox"]
+custom_minimum_size = Vector2(0, 60)
+size_flags_vertical = 3
+bbcode_enabled = true
+text = ""
+theme_override_font_sizes/font_size = 10
+scroll_active = false
+
+[node name="Choices" type="VBoxContainer" parent="DialogueBox/HBox/VBox"]
+theme_override_constants/separation = 4
+
+[node name="ContinueArrow" type="Label" parent="DialogueBox"]
+anchors_preset = 4
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -18.0
+offset_right = -6.0
+offset_bottom = -4.0
+text = "▼"
+theme_override_font_sizes/font_size = 9
+visible = false

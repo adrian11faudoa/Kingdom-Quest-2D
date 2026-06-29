@@ -1,0 +1,115 @@
+[
+  {
+    "id": "elder_mira",
+    "name": "Elder Mira",
+    "description": "The wise elder of Ashvale Village. She carries the weight of her people.",
+    "portrait": "res://assets/art/characters/npcs/elder_mira_portrait.png",
+    "dialogue_id": "elder_mira_intro",
+    "is_merchant": false,
+    "faction": "villagers",
+    "schedule": [
+      { "hour": 7.0,  "position": { "x": 160, "y": 96  }, "animation": "idle" },
+      { "hour": 12.0, "position": { "x": 200, "y": 110 }, "animation": "walk" },
+      { "hour": 18.0, "position": { "x": 148, "y": 88  }, "animation": "idle" },
+      { "hour": 21.0, "position": { "x": 148, "y": 88  }, "animation": "idle" }
+    ]
+  },
+  {
+    "id": "merchant_tomlin",
+    "name": "Tomlin",
+    "description": "The village general merchant. Has a good eye for value.",
+    "portrait": "res://assets/art/characters/npcs/tomlin_portrait.png",
+    "dialogue_id": "tomlin_intro",
+    "is_merchant": true,
+    "merchant_id": "merchant_tomlin",
+    "faction": "merchants_guild",
+    "stock": [
+      { "id": "health_potion",   "qty": 10, "price_override": 20 },
+      { "id": "mana_potion",     "qty": 10, "price_override": 20 },
+      { "id": "stamina_herb",    "qty": 8,  "price_override": 12 },
+      { "id": "iron_ingot",      "qty": 20, "price_override": 10 },
+      { "id": "wood_handle",     "qty": 15, "price_override": 5  },
+      { "id": "sharpening_stone","qty": 10, "price_override": 8  },
+      { "id": "wheat_seed",      "qty": 20, "price_override": 5  }
+    ],
+    "schedule": [
+      { "hour": 8.0,  "position": { "x": 220, "y": 130 }, "animation": "idle" },
+      { "hour": 12.0, "position": { "x": 210, "y": 140 }, "animation": "idle" },
+      { "hour": 19.0, "position": { "x": 205, "y": 135 }, "animation": "idle" },
+      { "hour": 21.0, "position": { "x": 230, "y": 150 }, "animation": "idle" }
+    ]
+  },
+  {
+    "id": "fisherman_bert",
+    "name": "Bert",
+    "description": "A weathered fisherman. Claims to have caught a dragon once.",
+    "portrait": "res://assets/art/characters/npcs/bert_portrait.png",
+    "dialogue_id": "fisherman_bert_intro",
+    "is_merchant": false,
+    "faction": "villagers",
+    "schedule": [
+      { "hour": 5.0,  "position": { "x": 320, "y": 200 }, "animation": "idle" },
+      { "hour": 9.0,  "position": { "x": 310, "y": 195 }, "animation": "idle" },
+      { "hour": 14.0, "position": { "x": 300, "y": 180 }, "animation": "walk" },
+      { "hour": 18.0, "position": { "x": 290, "y": 170 }, "animation": "idle" },
+      { "hour": 20.0, "position": { "x": 260, "y": 160 }, "animation": "idle" }
+    ]
+  },
+  {
+    "id": "farmer_hanna",
+    "name": "Old Hanna",
+    "description": "Runs the village farm. Proud of every crop she grows.",
+    "portrait": "res://assets/art/characters/npcs/hanna_portrait.png",
+    "dialogue_id": "farmer_hanna_intro",
+    "is_merchant": false,
+    "faction": "villagers",
+    "schedule": [
+      { "hour": 6.0,  "position": { "x": 100, "y": 200 }, "animation": "walk" },
+      { "hour": 10.0, "position": { "x": 120, "y": 210 }, "animation": "idle" },
+      { "hour": 14.0, "position": { "x": 130, "y": 220 }, "animation": "walk" },
+      { "hour": 17.0, "position": { "x": 110, "y": 200 }, "animation": "idle" },
+      { "hour": 20.0, "position": { "x": 95,  "y": 190 }, "animation": "idle" }
+    ]
+  },
+  {
+    "id": "blacksmith_gruk",
+    "name": "Gruk",
+    "description": "The village blacksmith. Speaks few words, but his work speaks volumes.",
+    "portrait": "res://assets/art/characters/npcs/gruk_portrait.png",
+    "dialogue_id": "blacksmith_gruk_intro",
+    "is_merchant": true,
+    "merchant_id": "blacksmith_gruk",
+    "faction": "merchants_guild",
+    "stock": [
+      { "id": "iron_sword",      "qty": 2,  "price_override": 80  },
+      { "id": "leather_armor",   "qty": 2,  "price_override": 60  },
+      { "id": "iron_ingot",      "qty": 15, "price_override": 11  },
+      { "id": "steel_ingot",     "qty": 8,  "price_override": 28  },
+      { "id": "sharpening_stone","qty": 12, "price_override": 7   }
+    ],
+    "schedule": [
+      { "hour": 7.0,  "position": { "x": 280, "y": 100 }, "animation": "idle" },
+      { "hour": 12.0, "position": { "x": 285, "y": 105 }, "animation": "idle" },
+      { "hour": 18.0, "position": { "x": 280, "y": 100 }, "animation": "idle" },
+      { "hour": 21.0, "position": { "x": 270, "y": 120 }, "animation": "idle" }
+    ]
+  },
+  {
+    "id": "wandering_merchant",
+    "name": "Zara the Traveller",
+    "description": "A wandering merchant carrying exotic goods from distant lands.",
+    "portrait": "res://assets/art/characters/npcs/zara_portrait.png",
+    "dialogue_id": "wandering_merchant_intro",
+    "is_merchant": true,
+    "merchant_id": "wandering_merchant",
+    "faction": "merchants_guild",
+    "stock": [
+      { "id": "moonstone",       "qty": 2,  "price_override": 200 },
+      { "id": "strength_elixir", "qty": 3,  "price_override": 70  },
+      { "id": "steel_ingot",     "qty": 5,  "price_override": 32  },
+      { "id": "health_potion",   "qty": 5,  "price_override": 22  },
+      { "id": "mana_potion",     "qty": 5,  "price_override": 22  }
+    ],
+    "schedule": []
+  }
+]
