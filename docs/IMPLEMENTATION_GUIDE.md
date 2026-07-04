@@ -1,4 +1,4 @@
-# AetherQuest — Complete Implementation Guide
+# Kingdom Quest 2D — Complete Implementation Guide
 ## Godot 4.x Action RPG Architecture
 
 ---
@@ -59,7 +59,7 @@ Only 8 autoloads exist. Each is justified:
 ## 2. FOLDER STRUCTURE <a name="folder-structure"></a>
 
 ```
-AetherQuest/
+Kingdom Quest 2D/
 └── project/
     ├── project.godot
     ├── addons/                    # Third-party plugins
